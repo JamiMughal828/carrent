@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DriveLux</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <a href="#home" class="logo">
+            Drive<span>Lux</span>
+        </a>
+
+        <nav class="navbar" id="navbar">
+            <a href="#home">Home</a>
+            <a href="#cars">Cars</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button class="theme-btn" id="themeBtn" title="Change Theme">
+                🌙
+            </button>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="hero-tag">
+                PREMIUM CAR RENTAL
+            </p>
+
+            <h1>
+                Your Journey,<br>
+                <span>Your Car.</span>
+            </h1>
+
+            <p class="hero-description">
+                Experience the freedom of the road with our premium
+                collection of cars at affordable rental prices.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#cars" class="btn primary-btn">
+                    Explore Cars
+                </a>
+
+                <a href="#calculator" class="btn outline-btn">
+                    Calculate Rent
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-search">
+
+            <div class="search-item">
+
+                <span>📍</span>
+
+                <div>
+                    <small>Location</small>
+                    <strong>Karachi, Pakistan</strong>
+                </div>
+
+            </div>
+
+
+            <div class="search-item">
+
+                <span>📅</span>
+
+                <div>
+                    <small>Pickup Date</small>
+                    <input type="date" id="heroPickup">
+                </div>
+
+            </div>
+
+
+            <div class="search-item">
+
+                <span>🚗</span>
+
+                <div>
+                    <small>Car Type</small>
+
+                    <select id="heroCategory">
+
+                        <option value="all">All Cars</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="sports">Sports</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <button class="search-btn" id="heroSearch">
+                Search Cars
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CARS ================= -->
+
+    <section class="cars-section" id="cars">
+
+        <div class="section-heading">
+
+            <p>OUR FLEET</p>
+
+            <h2>
+                Find Your <span>Perfect Ride</span>
+            </h2>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <!-- SEARCH & FILTER -->
+
+        <div class="car-controls">
+
+            <div class="search-box">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search car name..."
+                >
+
+            </div>
+
+
+            <select id="categoryFilter">
+
+                <option value="all">All Categories</option>
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="sports">Sports</option>
+
+            </select>
+
+
+            <select id="transmissionFilter">
+
+                <option value="all">Transmission</option>
+                <option value="automatic">Automatic</option>
+                <option value="manual">Manual</option>
+
+            </select>
+
+
+            <select id="priceFilter">
+
+                <option value="all">All Prices</option>
+                <option value="low">Under $100</option>
+                <option value="medium">$100 - $200</option>
+                <option value="high">$200+</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- CAR GRID -->
+
+        <div class="car-grid" id="carGrid">
+
+
+            <!-- CAR 1 -->
+
+            <article
+                class="car-card"
+                data-name="BMW 5 Series"
+                data-category="sedan"
+                data-transmission="automatic"
+                data-price="85"
+            >
+
+                <div class="car-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1000&q=85"
+                        alt="BMW 5 Series"
+                    >
+
+                    <span class="car-badge">
+                        Popular
+                    </span>
+
+                    <button class="favorite-btn">
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="car-info">
+
+                    <div class="car-title">
+
+                        <div>
+                            <h3>BMW 5 Series</h3>
+                            <p>Luxury Sedan</p>
+                        </div>
+
+                        <div class="rating">
+                            ⭐ 4.9
+                        </div>
+
+                    </div>
+
+
+                    <div class="car-specs">
+
+                        <span>⚙ Automatic</span>
+                        <span>👤 5 Seats</span>
+                        <span>⛽ Petrol</span>
+
+                    </div>
+
+
+                    <div class="car-bottom">
+
+                        <div class="car-price">
+                            <strong>$85</strong>
+                            <small>/day</small>
+                        </div>
+
+                        <button
+                            class="details-btn"
+                            data-car="BMW 5 Series"
+                        >
+                            Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CAR 2 -->
+
+            <article
+                class="car-card"
+                data-name="Range Rover"
+                data-category="suv"
+                data-transmission="automatic"
+                data-price="120"
+            >
+
+                <div class="car-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1000&q=85"
+                        alt="Range Rover"
+                    >
+
+                    <span class="car-badge premium">
+                        Premium
+                    </span>
+
+                    <button class="favorite-btn">
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="car-info">
+
+                    <div class="car-title">
+
+                        <div>
+                            <h3>Range Rover</h3>
+                            <p>Luxury SUV</p>
+                        </div>
+
+                        <div class="rating">
+                            ⭐ 4.8
+                        </div>
+
+                    </div>
+
+
+                    <div class="car-specs">
+
+                        <span>⚙ Automatic</span>
+                        <span>👤 7 Seats</span>
+                        <span>⛽ Petrol</span>
+
+                    </div>
+
+
+                    <div class="car-bottom">
+
+                        <div class="car-price">
+                            <strong>$120</strong>
+                            <small>/day</small>
+                        </div>
+
+                        <button
+                            class="details-btn"
+                            data-car="Range Rover"
+                        >
+                            Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CAR 3 -->
+
+            <article
+                class="car-card"
+                data-name="Porsche 911"
+                data-category="sports"
+                data-transmission="automatic"
+                data-price="250"
+            >
+
+                <div class="car-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=85"
+                        alt="Porsche 911"
+                    >
+
+                    <span class="car-badge premium">
+                        Premium
+                    </span>
+
+                    <button class="favorite-btn">
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="car-info">
+
+                    <div class="car-title">
+
+                        <div>
+                            <h3>Porsche 911</h3>
+                            <p>Sports Car</p>
+                        </div>
+
+                        <div class="rating">
+                            ⭐ 5.0
+                        </div>
+
+                    </div>
+
+
+                    <div class="car-specs">
+
+                        <span>⚙ Automatic</span>
+                        <span>👤 2 Seats</span>
+                        <span>⛽ Petrol</span>
+
+                    </div>
+
+
+                    <div class="car-bottom">
+
+                        <div class="car-price">
+                            <strong>$250</strong>
+                            <small>/day</small>
+                        </div>
+
+                        <button
+                            class="details-btn"
+                            data-car="Porsche 911"
+                        >
+                            Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CAR 4 -->
+
+            <article
+                class="car-card"
+                data-name="Audi A4"
+                data-category="sedan"
+                data-transmission="manual"
+                data-price="70"
+            >
+
+                <div class="car-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1000&q=85"
+                        alt="Audi A4"
+                    >
+
+                    <span class="car-badge">
+                        Best Value
+                    </span>
+
+                    <button class="favorite-btn">
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="car-info">
+
+                    <div class="car-title">
+
+                        <div>
+                            <h3>Audi A4</h3>
+                            <p>Executive Sedan</p>
+                        </div>
+
+                        <div class="rating">
+                            ⭐ 4.7
+                        </div>
+
+                    </div>
+
+
+                    <div class="car-specs">
+
+                        <span>⚙ Manual</span>
+                        <span>👤 5 Seats</span>
+                        <span>⛽ Petrol</span>
+
+                    </div>
+
+
+                    <div class="car-bottom">
+
+                        <div class="car-price">
+                            <strong>$70</strong>
+                            <small>/day</small>
+                        </div>
+
+                        <button
+                            class="details-btn"
+                            data-car="Audi A4"
+                        >
+                            Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CAR 5 -->
+
+            <article
+                class="car-card"
+                data-name="Jeep Wrangler"
+                data-category="suv"
+                data-transmission="manual"
+                data-price="95"
+            >
+
+                <div class="car-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=85"
+                        alt="Jeep Wrangler"
+                    >
+
+                    <span class="car-badge">
+                        Adventure
+                    </span>
+
+                    <button class="favorite-btn">
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="car-info">
+
+                    <div class="car-title">
+
+                        <div>
+                            <h3>Jeep Wrangler</h3>
+                            <p>Adventure SUV</p>
+                        </div>
+
+                        <div class="rating">
+                            ⭐ 4.8
+                        </div>
+
+                    </div>
+
+
+                    <div class="car-specs">
+
+                        <span>⚙ Manual</span>
+                        <span>👤 5 Seats</span>
+                        <span>⛽ Petrol</span>
+
+                    </div>
+
+
+                    <div class="car-bottom">
+
+                        <div class="car-price">
+                            <strong>$95</strong>
+                            <small>/day</small>
+                        </div>
+
+                        <button
+                            class="details-btn"
+                            data-car="Jeep Wrangler"
+                        >
+                            Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CAR 6 -->
+
+            <article
+                class="car-card"
+                data-name="Lamborghini Huracan"
+                data-category="sports"
+                data-transmission="automatic"
+                data-price="300"
+            >
+
+                <div class="car-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1000&q=85"
+                        alt="Lamborghini Huracan"
+                    >
+
+                    <span class="car-badge premium">
+                        Supercar
+                    </span>
+
+                    <button class="favorite-btn">
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="car-info">
+
+                    <div class="car-title">
+
+                        <div>
+                            <h3>Lamborghini</h3>
+                            <p>Huracan Supercar</p>
+                        </div>
+
+                        <div class="rating">
+                            ⭐ 5.0
+                        </div>
+
+                    </div>
+
+
+                    <div class="car-specs">
+
+                        <span>⚙ Automatic</span>
+                        <span>👤 2 Seats</span>
+                        <span>⛽ Petrol</span>
+
+                    </div>
+
+
+                    <div class="car-bottom">
+
+                        <div class="car-price">
+                            <strong>$300</strong>
+                            <small>/day</small>
+                        </div>
+
+                        <button
+                            class="details-btn"
+                            data-car="Lamborghini Huracan"
+                        >
+                            Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="no-results" id="noResults">
+            <span>🚗</span>
+            <h3>No Cars Found</h3>
+            <p>Try changing your search or filters.</p>
+        </div>
+
+    </section>
+
+
+    <!-- ================= CALCULATOR ================= -->
+
+    <section class="calculator-section" id="calculator">
+
+        <div class="section-heading light">
+
+            <p>RENTAL CALCULATOR</p>
+
+            <h2>
+                Calculate Your <span>Rental Cost</span>
+            </h2>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="calculator-wrapper">
+
+
+            <div class="calculator-form">
+
+                <h3>Rental Details</h3>
+
+                <p class="form-description">
+                    Select your car and rental dates to calculate
+                    the estimated cost.
+                </p>
+
+
+                <label>Select Car</label>
+
+                <select id="carSelect">
+
+                    <option value="85" data-name="BMW 5 Series">
+                        BMW 5 Series - $85/day
+                    </option>
+
+                    <option value="120" data-name="Range Rover">
+                        Range Rover - $120/day
+                    </option>
+
+                    <option value="250" data-name="Porsche 911">
+                        Porsche 911 - $250/day
+                    </option>
+
+                    <option value="70" data-name="Audi A4">
+                        Audi A4 - $70/day
+                    </option>
+
+                    <option value="95" data-name="Jeep Wrangler">
+                        Jeep Wrangler - $95/day
+                    </option>
+
+                    <option value="300" data-name="Lamborghini Huracan">
+                        Lamborghini Huracan - $300/day
+                    </option>
+
+                </select>
+
+
+                <div class="date-grid">
+
+                    <div>
+
+                        <label>Pickup Date</label>
+
+                        <input type="date" id="pickupDate">
+
+                    </div>
+
+
+                    <div>
+
+                        <label>Return Date</label>
+
+                        <input type="date" id="returnDate">
+
+                    </div>
+
+                </div>
+
+
+                <label>Insurance</label>
+
+                <select id="insurance">
+
+                    <option value="0">
+                        No Insurance
+                    </option>
+
+                    <option value="15">
+                        Basic Insurance - $15/day
+                    </option>
+
+                    <option value="30">
+                        Premium Insurance - $30/day
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="calculate-btn"
+                    id="calculateBtn"
+                >
+                    Calculate Total
+                </button>
+
+            </div>
+
+
+            <div class="calculator-result">
+
+                <div class="result-top">
+                    <span>ESTIMATED TOTAL</span>
+                    <div>🚗</div>
+                </div>
+
+                <h3 id="selectedCar">
+                    BMW 5 Series
+                </h3>
+
+                <div class="total-price">
+                    $<span id="totalPrice">85</span>
+                </div>
+
+                <p>Estimated rental cost</p>
+
+
+                <div class="result-details">
+
+                    <div>
+                        <span>Daily Rate</span>
+                        <strong>
+                            $<span id="dailyRate">85</span>
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Rental Days</span>
+                        <strong id="totalDays">1</strong>
+                    </div>
+
+                    <div>
+                        <span>Insurance</span>
+                        <strong>
+                            $<span id="insuranceCost">0</span>
+                        </strong>
+                    </div>
+
+                    <div class="result-total">
+                        <span>Total</span>
+                        <strong>
+                            $<span id="finalTotal">85</span>
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="book-btn"
+                    id="bookNowBtn"
+                >
+                    Book This Car
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= REVIEWS ================= -->
+
+    <section class="reviews-section" id="reviews">
+
+        <div class="section-heading">
+
+            <p>CUSTOMER REVIEWS</p>
+
+            <h2>
+                What Our <span>Customers Say</span>
+            </h2>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="review-grid">
+
+
+            <div class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The booking process was extremely easy.
+                    The car was clean, comfortable and exactly
+                    as shown on the website."
+                </p>
+
+                <div class="review-user">
+
+                    <div class="avatar">
+                        A
+                    </div>
+
+                    <div>
+                        <strong>Ahmed Khan</strong>
+                        <small>Karachi</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Amazing experience! I rented the BMW for
+                    a business trip and everything went perfectly."
+                </p>
+
+                <div class="review-user">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div>
+                        <strong>Sarah Ali</strong>
+                        <small>Lahore</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Great selection of premium cars and very
+                    transparent pricing. I will definitely rent
+                    again."
+                </p>
+
+                <div class="review-user">
+
+                    <div class="avatar">
+                        M
+                    </div>
+
+                    <div>
+                        <strong>Michael R.</strong>
+                        <small>Islamabad</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact-section" id="contact">
+
+        <div class="section-heading">
+
+            <p>GET IN TOUCH</p>
+
+            <h2>
+                Ready To <span>Drive?</span>
+            </h2>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="contact-container">
+
+
+            <div class="contact-info">
+
+                <h3>
+                    Let's Start Your Journey
+                </h3>
+
+                <p>
+                    Have questions about our cars or rental packages?
+                    Contact our team and we will help you find the
+                    perfect car.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div>
+                        <strong>Location</strong>
+                        <p>Karachi, Pakistan</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <div>
+                        <strong>Phone</strong>
+                        <p>+92 300 1234567</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ✉
+                    </div>
+
+                    <div>
+                        <strong>Email</strong>
+                        <p>info@drivelux.com</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form class="contact-form" id="contactForm">
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    required
+                >
+
+                <textarea
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+                <p id="formMessage"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CAR DETAILS MODAL ================= -->
+
+    <div class="modal" id="carModal">
+
+        <div class="modal-content">
+
+            <button class="close-modal" id="closeModal">
+                ×
+            </button>
+
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="Car">
+            </div>
+
+            <div class="modal-info">
+
+                <span class="modal-label">
+                    PREMIUM VEHICLE
+                </span>
+
+                <h2 id="modalTitle">
+                    BMW 5 Series
+                </h2>
+
+                <div class="modal-rating">
+                    ⭐ 4.9 / 5.0
+                </div>
+
+                <p id="modalDescription">
+                    Experience premium comfort, performance
+                    and luxury with this beautiful vehicle.
+                </p>
+
+                <div class="modal-features">
+
+                    <span>⚙ Automatic</span>
+                    <span>👤 5 Seats</span>
+                    <span>❄ AC</span>
+                    <span>📱 Bluetooth</span>
+
+                </div>
+
+                <div class="modal-price">
+                    <strong id="modalPrice">$85</strong>
+                    <span>/ day</span>
+                </div>
+
+                <button class="modal-book" id="modalBook">
+                    Rent This Car
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= BOOKING MODAL ================= -->
+
+    <div class="modal" id="bookingModal">
+
+        <div class="booking-box">
+
+            <button class="close-modal" id="closeBooking">
+                ×
+            </button>
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>Booking Request</h2>
+
+            <p>
+                Your booking request has been prepared successfully.
+            </p>
+
+            <div class="booking-summary">
+
+                <p>
+                    <strong>Car:</strong>
+                    <span id="bookingCar">
+                        BMW 5 Series
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Days:</strong>
+                    <span id="bookingDays">1</span>
+                </p>
+
+                <p>
+                    <strong>Total:</strong>
+                    $<span id="bookingTotal">85</span>
+                </p>
+
+            </div>
+
+            <button
+                class="confirm-btn"
+                id="confirmBooking"
+            >
+                Confirm Booking
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <a href="#home" class="footer-logo">
+                Drive<span>Lux</span>
+            </a>
+
+            <p>
+                Premium cars. Simple rentals.
+                Unforgettable journeys.
+            </p>
+
+            <div class="socials">
+
+                <a href="#">f</a>
+                <a href="#">𝕏</a>
+                <a href="#">◎</a>
+                <a href="#">in</a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 DriveLux. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
